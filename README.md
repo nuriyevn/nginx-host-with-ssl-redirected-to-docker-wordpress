@@ -1,7 +1,7 @@
 # nginx-ssl
 
 
-1. Download the Let’s Encrypt Client
+#1. Download the Let’s Encrypt Client
 
 First, download the Let’s Encrypt client, certbot.
 
@@ -17,7 +17,7 @@ $ apt-get update
 $ sudo apt-get install certbot
 $ apt-get install python3-certbot-nginx
 
-2. Set Up NGINX
+#2. Set Up NGINX
 certbot can automatically configure NGINX for SSL/TLS. It looks for and modifies the server block in your NGINX configuration that contains a server_name directive with the domain name you’re requesting a certificate for. In our example, the domain is www.example.com.
 
 Assuming you’re starting with a fresh NGINX install, use a text editor to create a file in the /etc/nginx/conf.d directory named domain‑name.conf (so in our example, www.example.com.conf).
@@ -42,7 +42,7 @@ listen 80 default_server;
 listen [::]:80 default_server;
 
 
-3. Obtain the SSL/TLS Certificate
+#3. Obtain the SSL/TLS Certificate
 
 $ sudo certbot --nginx -d example.com -d www.example.com
 
